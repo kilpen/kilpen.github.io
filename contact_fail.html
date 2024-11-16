@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Failed</title>
+    <style>
+        /* Basic page styling */
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('https://kilpen.com/images/automation_background.png'); /* Replace with your image path */
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Centered popup box */
+        .popup {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            max-width: 400px;
+            width: 100%;
+        }
+
+        .popup h2 {
+            margin: 0;
+            font-size: 24px;
+            color: #333;
+        }
+
+        .popup p {
+            margin: 10px 0 20px;
+            color: #555;
+        }
+
+        .popup button {
+            padding: 10px 20px;
+            background-color: #C22828;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .popup button:hover {
+            background-color: #b02525;
+        }
+    </style>
+</head>
+<body>
+    <div class="popup">
+        <h2>Something went wrong!</h2>
+        <p>Your form submission was not processed due to failed human verification.  If you have a heartbeat, please contact us directly via email using contact@kilpen.com.</p>
+        <button onclick="closePopup()">Return to Kilpen.com</button>
+    </div>
+
+    <script>
+        function closePopup() {
+            document.querySelector('.popup').style.display = 'none';
+            window.location.replace("https://kilpen.com")
+        }
+    </script>
+</body>
+</html>
